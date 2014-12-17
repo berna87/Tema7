@@ -1,0 +1,21 @@
+import librerias.matematicas.SistemaEcuaciones;
+import librerias.matematicas.EcuacionSegundoGrado;
+import java.util.Scanner;
+public class TestMatematicas{
+	public static void main(String[]ar){
+		//probando la ecuacion de segundo grado
+		Scanner sc = new Scanner(System.in);
+		EcuacionSegundoGrado ec1 = new EcuacionSegundoGrado();
+		System.out.println("introduce el valor de a");
+		ec1.setA(sc.nextInt());
+		System.out.println("introduce el valor de b");
+		ec1.setB(sc.nextInt());
+		System.out.println("introduce el valor de c");
+		ec1.setC(sc.nextInt());
+		System.out.println("Valor de X1 : "+ec1.x1()+"\nValor de X2 : "+ec1.x2());
+		//probando el sistema de ecuaciones
+		SistemaEcuaciones ec2 = new SistemaEcuaciones(2,1,-1,2,7,-1);
+		System.out.println(ec2);
+	
+	}
+}
